@@ -119,14 +119,21 @@ h3 {
 .accordion__content {
     font-size: 0.75rem;
     line-height: 1.4;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.accordion__collapse {
+    transition: height 600ms ease;
 }
 
 .accordion__collapse.collapse {
     display: none;
 }
 
-.accordion__collapse.collapsing {}
+.accordion__collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+}
 
 .accordion__collapse.open {
     display: block;
@@ -153,9 +160,9 @@ h3 {
         display: block;
         position: absolute;
         z-index: 1;
-        top: 57%;
+        top: 59.5%;
         left: 0;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-55%) translateY(-50%);
     }
 
     .card__image,
